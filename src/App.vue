@@ -1,30 +1,26 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import { reactive } from 'vue';
+import ProductComponent from './components/ProductComponent.vue';
+
+const _productinfo = reactive({
+  category: "Perfume",
+  name: "Gabrielle Essence Eau De Parfum",
+  images: {
+    mobile: "./images/image-product-mobile.jpg",
+    desktop: "./images/image-product-desktop.jpg",
+
+  },
+  description: "A floral, solar and voluptuous interpretation composed by Olivier Polge, \
+  Perfumer-Creator for the House of CHANEL.",
+  current_price: 149.99,
+  previous_price: 169.99,
+})
+
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <ProductComponent :product_data="_productinfo" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<style scoped></style>
