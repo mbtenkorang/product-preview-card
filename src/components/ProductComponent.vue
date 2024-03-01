@@ -20,7 +20,7 @@ const BUTTON_LABEL = reactive({
         </picture>
     </div>
 
-    <div class="py-4 px-6 lg:flex lg:flex-col lg:justify-around lg:mx-3">
+    <div class="py-4 px-6 lg:flex lg:flex-col lg:justify-around">
         <span class="text-xs tracking-[6px]">{{ product_data.category.toUpperCase() }}</span>
         <h1 class="font-serif font-bold text-4xl text-dark-blue my-5">{{ product_data.name }}</h1>
         <p class="text-base text-gray-blue font-normal">{{ product_data.description }}</p>
