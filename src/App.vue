@@ -14,8 +14,6 @@ const _productinfo = reactive({
   current_price: 149.99,
   previous_price: 169.99,
 })
-
-
 </script>
 
 <template>
